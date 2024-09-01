@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import Button from './Button';
+// import reactLogo from './assets/react.svg';
+// import viteLogo from '/vite.svg';
+// import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [number, setNumber] = useState('0');
+
+  function handleClick(event) {
+    if (number === '0') {
+      setNumber(() => event.target.value);
+    } else {
+      setNumber((number) => number + event.target.value);
+    }
+  }
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <p>{number}</p>
       </div>
-      <h1>Vite + React</h1>
+
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <Button value={'1'} onClickButton={handleClick} />
+        <Button value={'2'} onClickButton={handleClick} />
+        <Button value={'3'} onClickButton={handleClick} />
+        <Button value={'4'} onClickButton={handleClick} />
+        <Button value={'5'} onClickButton={handleClick} />
+        <Button value={'6'} onClickButton={handleClick} />
+        <Button value={'7'} onClickButton={handleClick} />
+        <Button value={'8'} onClickButton={handleClick} />
+        <Button value={'9'} onClickButton={handleClick} />
+        <Button value={'0'} onClickButton={handleClick} />
+        <Button value={'+'} onClickButton={handleClick} />
+        <Button value={'-'} onClickButton={handleClick} />
+        <Button value={'/'} onClickButton={handleClick} />
+        <Button value={'*'} onClickButton={handleClick} />
+        <Button
+          value={'='}
+          onClickButton={() => setNumber((number) => eval(number))}
+        />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
