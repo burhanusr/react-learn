@@ -1,0 +1,37 @@
+.form-container .form-group {
+  border-radius: 6px;
+  background-color: #e6e6e6;
+  padding: 10px 9px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.form-container .icon {
+  display: inline-block;
+  background-size: cover;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px 0 4px;
+}
+
+.form-container .username {
+  background-image: url(../../../../assets/username.svg);
+}
+
+.form-container .email {
+  background-image: url(../../../../assets/email.svg);
+}
+
+.form-container .password {
+  background-image: url(../../../../assets/password.svg);
+}
+
+.form-container input {
+  border: none;
+  background-color: transparent;
+}
+
+.form-container input:focus {
+  outline: none;
+}

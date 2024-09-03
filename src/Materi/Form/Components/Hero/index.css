@@ -1,0 +1,13 @@
+.hero {
+  background-color: #424242;
+  width: 55%;
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  text-align: center;
+}

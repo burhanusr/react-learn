@@ -1,0 +1,36 @@
+.form-container {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffff;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.form-container legend {
+  font-weight: bold;
+  color: #424242;
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+.form-container fieldset {
+  border: none;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container .btn {
+  border: none;
+  border-radius: 6px;
+  background-color: #424242;
+  color: #ffff;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  margin-top: 12px;
+}
