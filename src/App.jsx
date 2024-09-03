@@ -1,46 +1,29 @@
 import { useState } from 'react';
-import Button from './Button';
+import Button from './Materi/Components/Button';
+import Plain from './Materi/Styling/Plain/Plain';
+import Sass from './Materi/Styling/Sass/Sass';
+import Inline from './Materi/Styling/Inline/Inline';
+import Styled from './Materi/Styling/Styled/Styled';
+import ReactBootstrap from './Materi/Styling/React-Bootstrap/ReactBootstrap';
+
 // import reactLogo from './assets/react.svg';
 // import viteLogo from '/vite.svg';
 // import './App.css';
 
 function App() {
-  const [number, setNumber] = useState('0');
-
-  function handleClick(event) {
-    if (number === '0') {
-      setNumber(() => event.target.value);
-    } else {
-      setNumber((number) => number + event.target.value);
-    }
-  }
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>
-        <p>{number}</p>
-      </div>
-
-      <div className="card">
-        <Button value={'1'} onClickButton={handleClick} />
-        <Button value={'2'} onClickButton={handleClick} />
-        <Button value={'3'} onClickButton={handleClick} />
-        <Button value={'4'} onClickButton={handleClick} />
-        <Button value={'5'} onClickButton={handleClick} />
-        <Button value={'6'} onClickButton={handleClick} />
-        <Button value={'7'} onClickButton={handleClick} />
-        <Button value={'8'} onClickButton={handleClick} />
-        <Button value={'9'} onClickButton={handleClick} />
-        <Button value={'0'} onClickButton={handleClick} />
-        <Button value={'+'} onClickButton={handleClick} />
-        <Button value={'-'} onClickButton={handleClick} />
-        <Button value={'/'} onClickButton={handleClick} />
-        <Button value={'*'} onClickButton={handleClick} />
-        <Button
-          value={'='}
-          onClickButton={() => setNumber((number) => eval(number))}
-        />
-      </div>
+      <Button
+        onClickButton={() => setCount((count) => count + 1)}
+        value={count}
+      />
+      <Plain />
+      <Sass />
+      <Inline />
+      <Styled />
+      <ReactBootstrap />
     </>
   );
 }
