@@ -7,7 +7,7 @@ export default class MateriForm extends React.Component {
   render() {
     return (
       <div className="container">
-        <Hero text="Tugas Form & Validation" />
+        <Hero text="Tugas Router" />
         <Form />
       </div>
     );
