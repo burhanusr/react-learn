@@ -15,6 +15,9 @@ export default function Nav() {
       <button>
         <Link to={'/styling'}>Materi Styling</Link>
       </button>
+      <button>
+        <Link to={'/redux'}>Materi Redux</Link>
+      </button>
     </div>
   );
 }
